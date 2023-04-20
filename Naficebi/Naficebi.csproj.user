@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\tjalagania\source\repos\Naficebi\Naficebi\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\AddAccountPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\AuthorizatiionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CaseListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\NewCasePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ProcessPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\AuthTextBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\LeftPanelWithoutItems.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\Lodaer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\MainLeftPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\ProcessLeftButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\ProcessPageBaner.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\SelectNumbers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\TextBlockWithBottomBorder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControll\WIndowsButtonsUc.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WorkTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\AddAccountPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\AuthorizatiionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CaseListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\NewCasePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ProcessPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\template.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TemplateFlow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\IconStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\AuthTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\LeftPanelWithoutItems.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\Lodaer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\MainLeftPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\ProcessLeftButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\ProcessPageBaner.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\SelectNumbers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\TextBlockWithBottomBorder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControll\WIndowsButtonsUc.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WorkTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
