@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="PrColor">#32415a</Color>
+    <Color x:Key="PhHvColor">#026fc9</Color>
+    <Color x:Key="PrCsCollor">#2b3b54</Color>
+    <SolidColorBrush x:Key="PlaceHolerColor" Color="#cccdce" />
+
+    <SolidColorBrush x:Key="MainColor" Color="#fff" />
+    <SolidColorBrush x:Key="BorderColor" Color="#d6d4d4" />
+    <SolidColorBrush x:Key="TypingColor" Color="#a8a8a8" />
+    <SolidColorBrush x:Key="PrimaryColor" Color="{StaticResource PrColor}" />
+    <SolidColorBrush x:Key="PrimaryColorHover" Color="{StaticResource PhHvColor}" />
+    <SolidColorBrush x:Key="DangerColor" Color="#d9534f" />
+    <SolidColorBrush x:Key="PrcsBtnColor" Color="{StaticResource PrCsCollor}" />
+</ResourceDictionary>

@@ -1,0 +1,146 @@
+﻿<Page x:Class="Naficebi.Pages.ProcessPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Naficebi.Pages"
+      xmlns:uc="clr-namespace:Naficebi.UserControll"
+      xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      mc:Ignorable="d" 
+      x:Name="prcpage"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProcessPage">
+
+    <Border CornerRadius="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="10 0 0 10"
+                    Background="#32415a">
+                <Grid>
+                    <StackPanel Width="250">
+                        <uc:ProcessPageBaner Margin="0 0 0 10" x:Name="Banner" />
+                        <uc:ProcessLeftButton Kind="Database" 
+                                              PreviewMouseLeftButtonUp="openDbAccess_MouseLeftButtonDown"
+                                              CaseNumber="მონაცემთა ბაზის არჩევა"  
+                                              
+                                              x:Name="openDbAccess"/>
+                        <uc:ProcessLeftButton Kind="CodeArray"  CaseNumber="300 კანდინანტის შერჩევა" 
+                                              x:Name="selectMainCandidateBtn"
+                                              PreviewMouseLeftButtonUp="selectMainCandidateBtn_MouseLeftButtonUp"
+                                              />
+                        <uc:ProcessLeftButton Kind="Archive"  CaseNumber="საქმის დაარქივება" x:Name="archiveBtn"
+                                              PreviewMouseLeftButtonUp="archiveBtn_PreviewMouseLeftButtonUp"
+                                              />
+                        <Grid Margin="0 20 0 0">
+                            <TextBlock Text="წინა პროცესებზე შერჩეული რიცხვები" 
+                                       Margin="12 0 12 0" Foreground="{StaticResource TypingColor}"
+                                       TextWrapping="Wrap"
+                                       />
+                            
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 45 0 0" 
+                                          
+                                          >
+                                <Grid VerticalAlignment="Stretch">
+                                     <StackPanel x:Name="numbersViewer" VerticalAlignment="Stretch">
+                                    
+                                    </StackPanel>
+                                </Grid>
+                               
+                            </ScrollViewer>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            
+            <Border Grid.Column="1" CornerRadius="0 10 10 0" Background="{StaticResource MainColor}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <uc:WIndowsButtonsUc />
+                    <Border Grid.Row="1" VerticalAlignment="Top" x:Name="principalList">
+                        <Grid>
+                            
+                              <Button Style="{StaticResource AuthButton}" 
+                                    x:Name="saveToExcel"
+                                    Click="saveToExcel_Click"
+                                    VerticalAlignment="Top"
+                                    Margin="10" Padding="10" Background="Green">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="FileExcelOutline" />
+                                    <TextBlock Text="იმპორტ ექსელში" Margin="10 0 0 0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            
+                            </Button>
+                            <Button HorizontalAlignment="Left"  
+                                    VerticalAlignment="Top"
+                                    x:Name="listBtn"
+                                    Cursor="Hand"
+                                    Click="listBtn_Click"
+                                    Height="30" Margin="160 12 0 0" Padding="5 0 " Style="{StaticResource button}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconCodicons Kind="Checklist" Margin="0 0 5 0" Width="20" Height="20" VerticalAlignment="Center" />
+                                    <TextBlock Text="პროცესების სია" FontSize="12" VerticalAlignment="Center"  />
+                                </StackPanel>
+
+                            </Button>
+                            <Button HorizontalAlignment="Left"
+                                    x:Name="PrintTemplate_btn"
+                                    Click="PrintTemplate_btn_Click"
+                                    Height="30" Margin="298 13 0 0" Padding="5 0 "
+                                    VerticalAlignment="Top"
+                                    Style="{StaticResource button}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconBootstrapIcons Kind="Book" Margin="0 0 5 0" Width="20" Height="20" VerticalAlignment="Center" />
+                                    <TextBlock Text="შაბლონის ბეჭდვა" FontSize="12" VerticalAlignment="Center"  />
+                                </StackPanel>
+
+                            </Button>
+                            <uc:Lodaer VerticalAlignment="Top"
+                                         Margin="10 20 10 0"
+                                         x:Name="loader"
+                                         Visibility="Hidden"
+                                         HorizontalAlignment="Right"/>
+                           
+                            
+                            <DataGrid CellStyle="{DynamicResource DataGridCellStyle1}"
+                                      RowStyle="{DynamicResource DataGridRowStyle1}" Style="{DynamicResource DataGridStyle1}" 
+                                      x:Name="principalGridPanel"
+                                     ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
+                                      VerticalAlignment="Top"
+                                      Margin="10 50 10 0">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="პირადი ნომერი" Width="*" Binding="{Binding Path=PV_NUNMBER}" />
+                                    <DataGridTextColumn Header="სახელი და გვარი" Width="*" Binding="{Binding Path=FullName}" />
+                                    <DataGridTextColumn Header="დაბადების თარიღი" Width="*" Binding="{Binding Path=BIRTH_DATE}" />
+                                    <DataGridTemplateColumn Header="მისამართი" Width="4*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=BP_FULL_ADDRESS}" TextWrapping="Wrap" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+                        </Grid>
+                        
+                    </Border>
+                    <StackPanel Grid.Row="1" Margin="0 50 0 0"  x:Name="selectNumberPanel" Visibility="Collapsed">
+                        <uc:SelectNumbers Number1="{Binding ElementName=prcpage,Path=Number1,Mode=TwoWay}" 
+                                          Number2="{Binding ElementName=prcpage,Path=Number2,Mode=TwoWay}" />
+                        <Button Margin="100 20 0 0" Style="{StaticResource AuthButton}" 
+                                x:Name="selectPrincipalButton"
+                                Click="selectPrincipalButton_Click"
+                                VerticalAlignment="Top" Grid.Row="1">არჩევა</Button>
+                    </StackPanel>
+                    
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Page>

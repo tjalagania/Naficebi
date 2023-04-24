@@ -1,0 +1,16 @@
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\bin\Release\net6.0\NaficebiLib.deps.json
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\bin\Release\net6.0\NaficebiLib.dll
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\bin\Release\net6.0\NaficebiLib.pdb
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\bin\Release\net6.0\SpreadsheetLight.dll
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\bin\Release\net6.0\SpreadsheetLight.xml
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.csproj.AssemblyReference.cache
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.csproj.ResolveComReference.cache
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.AssemblyInfoInputs.cache
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.AssemblyInfo.cs
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.csproj.CoreCompileInputs.cache
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.csproj.CopyComplete
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.dll
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\refint\NaficebiLib.dll
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\NaficebiLib.pdb
+C:\Users\tjalagania\source\repos\Naficebi\NaficebiLib\obj\Release\net6.0\ref\NaficebiLib.dll

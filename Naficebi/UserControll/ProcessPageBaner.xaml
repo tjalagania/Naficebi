@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Naficebi.UserControll.ProcessPageBaner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Naficebi.UserControll"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             x:Name="baner"
+             >
+    <Border CornerRadius="4" Background="{StaticResource PrcsBtnColor}"
+            Padding="10"
+            >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Width="40" Height="40" CornerRadius="50" BorderThickness="1" BorderBrush="{StaticResource BorderColor}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin=" 0 0 10 0"
+                    >
+                 <Icon:PackIconMaterial Kind="ScaleBalance" Foreground="{StaticResource BorderColor}"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"
+                                           Width="20"
+                                           Height="20"
+                                       />
+            </Border>
+           
+                                     
+            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                <TextBlock Text="{Binding ElementName=baner,Path=CaseNumber,Mode=Default}" Foreground="{StaticResource BorderColor}" FontSize="14" />
+                <TextBlock Text="{Binding ElementName=baner,Path=AccusedName,Mode=Default}" Foreground="{StaticResource BorderColor}" 
+                           FontWeight="SemiBold"
+                           FontSize="16"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

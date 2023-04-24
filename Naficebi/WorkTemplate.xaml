@@ -1,0 +1,102 @@
+﻿<Window x:Class="Naficebi.WorkTemplate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:Pages="clr-namespace:Naficebi.Pages"
+        xmlns:local="clr-namespace:Naficebi"
+        mc:Ignorable="d"
+        Title="შაბლონის რედაქტირება" Height="1000" Width="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Ribbon>
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                    <RibbonButton SmallImageSource="{Icon:MaterialImage Kind=ContentSave}"
+                                  Command="ApplicationCommands.Save" />
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+            <RibbonTab Header="Home">
+
+                <RibbonGroup Header="Font">
+                    <StackPanel Margin="10 5">
+                        <RibbonComboBox   Label="Fonts" >
+                            <RibbonGallery SelectedValue="{Binding ElementName=mainText, Path=FontFamily}" SelectionChanged="RibbonGallery_SelectionChanged" >
+                                <RibbonGalleryCategory x:Name="fonts" />
+                            </RibbonGallery>
+                        </RibbonComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10 5">
+                        <RibbonButton SmallImageSource="{Icon:OcticonsImage Kind=Bold}" 
+                                  VerticalAlignment="Top" Command="EditingCommands.ToggleBold" CommandTarget="{Binding ElementName=mainText}"
+                                      Margin="5 0 5 0"
+                                  />
+                        <RibbonButton
+                            Margin="5 0 5 0"
+                            SmallImageSource="{Icon:OcticonsImage Kind=Italic}" Command="EditingCommands.ToggleItalic" CommandTarget="{Binding ElementName=mainText}" />
+                        <RibbonButton 
+                            Margin="5 0 5 0"
+                            SmallImageSource="{Icon:BoxIconsImage Kind=RegularUnderline}"
+                            Command="EditingCommands.ToggleUnderline" CommandTarget="{Binding ElementName=mainText}" />
+                    </StackPanel>
+
+                </RibbonGroup>
+                <RibbonGroup Header="Paragraph">
+                    <StackPanel Orientation="Horizontal" 
+                                Margin="0 10 "
+                                 >
+                        <RibbonButton SmallImageSource="{Icon:RemixIconImage Kind=AlignLeft}"
+                                      VerticalAlignment="Top" 
+                                      Command="EditingCommands.AlignLeft" Margin="5 0"
+                                      CommandTarget="{Binding ElementName=mainText}"/>
+                        <RibbonButton SmallImageSource="{Icon:RemixIconImage Kind=AlignCenter}"
+                                      VerticalAlignment="Top" 
+                                      Command="EditingCommands.AlignCenter" Margin="5 0"
+                                      CommandTarget="{Binding ElementName=mainText}"/>
+                        <RibbonButton SmallImageSource="{Icon:RemixIconImage Kind=AlignRight}"
+                                      VerticalAlignment="Top" 
+                                      Command="EditingCommands.AlignRight" Margin="5 0"
+                                      CommandTarget="{Binding ElementName=mainText}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" VerticalAlignment="Center">
+                        <RibbonButton Margin="5 0" SmallImageSource="{Icon:MaterialImage Kind=AccountBoxOutline}" 
+                                  x:Name="fullname"
+                                  Click="RibbonButton_Click"
+                                      ToolTip="FullName"
+                                  />
+                        <RibbonButton  
+                            Margin="5 0"
+                            SmallImageSource="{Icon:MaterialImage Kind=Numeric}" 
+                                  x:Name="pwnumber"
+                                  Click="RibbonButton_Click"
+                                      ToolTip="PW_Number"
+                                  />
+                        <RibbonButton  SmallImageSource="{Icon:MaterialImage Kind=HomeCity}" 
+                                  Margin="5 0"
+                                  Click="RibbonButton_Click"
+                                       x:Name="address"
+                                  />
+                        <RibbonButton  SmallImageSource="{Icon:MaterialImage Kind=ClockDigital}" 
+                                  Margin="5 0"
+                                  Click="RibbonButton_Click"
+                                       x:Name="bithday"
+                                  >
+                            <RibbonButton.ToolTip>
+                                <TextBlock Text="დაბადების თარიღი" />
+                            </RibbonButton.ToolTip>
+                        </RibbonButton>
+                    </StackPanel>
+                </RibbonGroup>
+            </RibbonTab>
+            
+        </Ribbon>
+        <RichTextBox Grid.Row="1" x:Name="mainText" FontSize="12"  >
+
+        </RichTextBox>
+    </Grid>
+
+</Window>

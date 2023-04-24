@@ -1,0 +1,27 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:local="clr-namespace:Naficebi.Pages"
+              ColumnWidth="400" FontSize="14" FontFamily="Georgia">
+    <Section>
+        <Paragraph 
+                        Margin="0 10 0 0"
+                        FontSize="18" FontWeight="Bold" TextAlignment="Center">
+            <Run>გაზავნილის ჩაბარების აქტი</Run>
+        </Paragraph>
+    </Section>
+    <Section>
+        <Paragraph>
+            <Span>
+                "....""......""20.."
+            </Span>
+            <LineBreak />
+            <Span>
+                გზავნილის მიმღების სახელი და გვარი:
+            </Span>
+            <LineBreak />
+            <Span>პირადი ნომერი:</Span>
+            <Span></Span>
+            <LineBreak />
+            <Span>დაბადების თარიღი</Span>
+        </Paragraph>
+    </Section>
+</FlowDocument>
