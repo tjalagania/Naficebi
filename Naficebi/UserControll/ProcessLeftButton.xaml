@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Naficebi.UserControll.ProcessLeftButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Naficebi.UserControll"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             x:Name="lftBtn"
+             >
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="ToVisib" />
+    </UserControl.Resources>
+    <RadioButton Style="{StaticResource ProcessButton}" x:Name="prcBtn" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Icon:PackIconMaterial Kind="{Binding ElementName=lftBtn,Path=Kind}"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"
+                                   Foreground="{StaticResource TypingColor}" 
+                                   Width="20"
+                                   Height="20"
+                                   />
+            <StackPanel VerticalAlignment="Center" Grid.Column="1">
+                <TextBlock Text="{Binding ElementName=lftBtn,Path=CaseNumber}" 
+                           TextWrapping="Wrap"
+                           Foreground="{StaticResource BorderColor}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding ElementName=lftBtn,Path=CreateDate,Mode=Default}" Margin="0 3 0 0"
+                           TextWrapping="Wrap"
+                           Foreground="{StaticResource TypingColor}"
+                           Visibility="{Binding ElementName=lftBtn,Path=SecondTextVisibility,Converter={StaticResource ToVisib}}" />
+            </StackPanel>
+        </Grid>
+    </RadioButton>
+</UserControl>
